@@ -12,7 +12,7 @@
 		ORDER BY SEQ DESC
 	</select> 
 	
-	<insert id="addrAdd"
+	<insert id="addAddr"
 		parameterType="bb.com.a.model.Bb_AddrDto">
 		INSERT INTO BB_ADDR
 		(SEQ, MEMBER_SEQ, ADDRESS, LAT, LNG, MEMO, DEL)

@@ -1,7 +1,7 @@
+
 <%@page import="java.util.List"%>
 <%@page import="bb.com.a.model.Bb_MemberDto"%>
 <%@page import="bb.com.a.model.Bb_AddrDto"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <title>Insert title here</title>
 
@@ -15,10 +15,11 @@ List<Bb_AddrDto> addrList = (List<Bb_AddrDto>)request.getAttribute("list");
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<%
+/* Bb_MemberDto member = (Bb_MemberDto)request.getAttribute("member"); 
+List<Bb_AddrDto> AddrList = (List<Bb_AddrDto>)request.getAttribute("addr"); */%>
 </head>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <body>
 
 

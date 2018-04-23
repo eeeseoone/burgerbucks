@@ -20,6 +20,10 @@
 </definition>
 
 
+
+<put-attribute name="main" value="/WEB-INF/views/login/regi.jsp"/>
+
+</definition>
 <!--오더로 이동-->
 <definition name="order.tiles" extends="home.tiles">
 	<put-attribute name="main" value="/WEB-INF/views/order/orderpage.jsp"/>
@@ -59,6 +63,9 @@
 <definition name="order_history.tiles" extends="changePwd.tiles">
 
 	<put-attribute name="main_side" value="/WEB-INF/views/mypage/mypage_order_history.jsp"/>
+<!--주소추가 폼으로 이동 -->
+<definition name="goAddr.tiles" extends="home.tiles">
+
 
 </definition>
 
@@ -73,6 +80,7 @@
 </definition>
 
 <!--주소추가하기 2-->
+<<<<<<< HEAD
 
 
 
@@ -99,10 +107,24 @@
 <definition name="addrUpdate.tiles" extends="changePwd.tiles">
 
 <put-attribute name="main_side" value="/WEB-INF/views/addr/addrUpdate.jsp"/>
+=======
+<definition name="addAddr.tiles" extends="home.tiles">
+
+<put-attribute name="main" value="/WEB-INF/views/addr/addAddr.jsp"/>
 
 </definition>
 
 
+<!--주소추가 완료-->
+<definition name="addAddrAf.tiles" extends="home.tiles">
+
+<put-attribute name="main" value="/WEB-INF/views/addr/addAddrAf.jsp"/>
+>>>>>>> 6932ad5efb32da475a3d0de920e0f1928dc67c98
+
+</definition>
+
+
+<<<<<<< HEAD
 <!--기타페이지로 이동 -->
 <!-- 문의하기 페이지로 이동 -->
 <definition name="customer_inquiry.tiles" template="/WEB-INF/views/layouts_mypage_ect_tiles.jsp">
@@ -130,6 +152,8 @@
 
 
 
+=======
+>>>>>>> 6932ad5efb32da475a3d0de920e0f1928dc67c98
 </tiles-definitions>
 
 
