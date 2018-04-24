@@ -85,6 +85,7 @@ public class BbMemberController {
 			session.setAttribute("login", login);
 			List<Bb_AddrDto> list = BbAddrService.allAddress(login);
 			session.setAttribute("list",list);
+			session.setAttribute("imagePath", "http://192.168.219.110:8191/upload/");
 			System.out.println("로그인 성공");
 		}else {
 			System.out.println("로그인 실패");

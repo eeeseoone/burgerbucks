@@ -29,9 +29,20 @@
 	<put-attribute name="main" value="/WEB-INF/views/order/orderpage.jsp"/>
 </definition>
 
+<<<<<<< HEAD:WebContent/WEB-INF/views/layouts.xml
 <!--DIY게시판으로 이동-->
 <definition name="diyboard.tiles" extends="changePwd.tiles">
 	<put-attribute name="main_side" value="/WEB-INF/views/order/diyboard.jsp"/>
+=======
+<!--diy게시판으로로이동-->
+<definition name="diyboard.tiles" extends="home.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/diyboard/diyboard.jsp"/>
+</definition>
+
+<!--diy버거등록게시판이동-->
+<definition name="addDiyBoard.tiles" extends="home.tiles">
+	<put-attribute name="main" value="/WEB-INF/views/diyboard/addDiyBoard.jsp"/>
+>>>>>>> a28af75e2ab1bae2eecf6200ef33d6e44faca7d3:BurgerBucksCustomer/WebContent/WEB-INF/views/layouts.xml
 </definition>
 
 
