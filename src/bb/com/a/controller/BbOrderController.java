@@ -57,15 +57,15 @@ public class BbOrderController {
 		return "order.tiles";
 	}
 	
-
-	/*--------------------------------------------------------------------------------------------
-	 * 오더페이지 클릭했을때 
-	 *-------------------------------------------------------------------------------------------*/
-	@RequestMapping(value="diyboard.do", method=RequestMethod.GET)
-	public String diyboard(Model model, HttpServletRequest req) throws Exception {
-		logger.info("BbOrderController diyboard");
-		return "diyboard.tiles";
-	}
+//
+//	/*--------------------------------------------------------------------------------------------
+//	 * 오더페이지 클릭했을때 
+//	 *-------------------------------------------------------------------------------------------*/
+//	@RequestMapping(value="diyboard.do", method=RequestMethod.GET)
+//	public String diyboard(Model model, HttpServletRequest req) throws Exception {
+//		logger.info("BbOrderController diyboard");
+//		return "diyboard.tiles";
+//	}
 	
 	/*--------------------------------------------------------------------------------------------
 	 * 주문 내역 페이지로 이동
