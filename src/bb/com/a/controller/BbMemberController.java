@@ -153,8 +153,6 @@ public class BbMemberController {
 		logger.info("BbaMemberController getID");	
 		Bb_MemberDto bmdto = new Bb_MemberDto();
 		bmdto.setSeq(Integer.parseInt((String)map.get("seq")));
-		bmdto.setId((String)map.get("id"));
-		bmdto.setPassword((String)map.get("password"));
 		System.out.println(bmdto.toString());
 		Bb_MemberDto checkPwd = bbMemberSerivce.login(bmdto);
 		Map<String, Object> rmap = new HashMap<String, Object>();

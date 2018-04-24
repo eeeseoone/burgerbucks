@@ -40,52 +40,40 @@
 	padding-top: 5px;	
 }
 </style>
-
-<div
-	style="padding: 0; margin: 0 auto; margin-top: 20px; height: 1000px; width: 1000px;">
-	<div align="center" style="overflow-y: scroll; height: 900px;">
-
+<<div style="padding: 0; margin: 0 auto; margin-top:20px; height: 1000px; width: 1000px;">
+	<div align="center" style="overflow-y: scroll; height:900px;">
 		<div align="center">
 			<h2 style="margin-bottom: 30px;">DIY버거등록하기</h2>
 		</div>
 		<div>
 			<c:forEach var="bbsdto" items="${bbsList}" varStatus="status">
-
+		
 				<div class="diy-box">
 					<div class="diy-detail">
-						<c:if test="${bbsdto.image_Src == '없음' }">
-							<img alt="" src="./UI/AdminBurgerImage.png"
-								style="width: 200px; height: 200px;">
-						</c:if>
-						<c:if test="${bbsdto.image_Src != '없음' }">
-							<img alt="" src="${imagePath}${bbsdto.image_src}"
-								style="width: 200px; height: 200px;">
-						</c:if>
-
+					<c:if test="${bbsdto.image_Src == '없음' }">
+					<img alt="" src="./UI/AdminBurgerImage.png" style="width: 200px; height: 200px;">
+					</c:if>
+					<c:if test="${bbsdto.image_Src != '없음' }">
+					<img alt="" src="${imagePath}${bbsdto.image_src}" style="width: 200px; height: 200px;">
+					</c:if>
+					
 					</div>
 					<div class="text-left">
-						<div style="font-size: 1.5em; color: Tomato">
-							<p style="margin-top: 3px;">
-								<i class="fa fa-check" style="font-size: 15px;">${bbsdto.name}</i>
-							</p>
+						<div style="font-size:1.5em; color:Tomato">
+							<p style="margin-top: 3px;"><i class="fa fa-check" style="font-size: 15px;">${bbsdto.name}</i></p>
 						</div>
-
+						
 					</div>
 					<div class="text-right">
-						<input type="button" class="btn btn-outlined btn-warning"
-							value="등록"
-							onclick="location.href='regiDiyBurger.do?seq=${bbsdto.seq}'">
-						<input type="button" class="btn btn-outlined btn-danger"
-							value="상세" onclick="bbsDetail('${bbsdto.seq}')"
-							data-toggle="modal" data-target="#detailModal"><br>
-						<p style="margin-top: 3px;">
-							<i class="fa fa-krw">${bbsdto.price}</i>
-						</p>
+						<input type="button" class="btn btn-outlined btn-warning" value="등록" onclick="location.href='regiDiyBurger.do?seq=${bbsdto.seq}'">
+						<input type="button"  class="btn btn-outlined btn-danger" value="상세" onclick="bbsDetail('${bbsdto.seq}')"  data-toggle="modal" data-target="#detailModal"><br>
+						<p style="margin-top: 3px;"><i class="fa fa-krw">${bbsdto.price}</i></p>
 					</div>
 				</div>
-				</c:forEach>
+				<c:if test="${status.index%3 ==2 }">
+				</c:if>
 				
-				<c:if test="${status.index%3 ==2 }"></c:if>
+			</c:forEach>
 		</div>
 	</div>
 </div>

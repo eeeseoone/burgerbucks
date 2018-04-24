@@ -1,6 +1,9 @@
 package bb.com.a.service.Impl;
 
 import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Service;
 import bb.com.a.dao.BbBurgerDiyDao;
 import bb.com.a.model.BB_DiyBurgerDto;
 import bb.com.a.model.Bb_BbsDto;
+import bb.com.a.model.Bb_LikeDto;
 import bb.com.a.service.BbBurgerDiyService;
 
 @Service
@@ -52,6 +56,42 @@ public class BbBurgerDiyServiceImpl implements BbBurgerDiyService {
 	public void regiDiyBurger(Bb_BbsDto bsdto) {
 		bbBurgerDiyDao.regiDiyBurger(bsdto);
 		
+	}
+
+  /*----------------------------------------------------------------------------
+   * 버거 라이크 추가 
+   * ----------------------------------------------------------------------------*/ 
+
+	@Override
+	public void likeClick(Bb_LikeDto ldto) throws Exception {
+		bbBurgerDiyDao.likeClick(ldto);
+	}
+  /*----------------------------------------------------------------------------
+   * 버거 라이크 삭제 
+   * ----------------------------------------------------------------------------*/ 
+
+	@Override
+	public void unlikeClick(Bb_LikeDto ldto) throws Exception {
+		bbBurgerDiyDao.unlikeClick(ldto);
+	}
+
+  /*----------------------------------------------------------------------------
+   * bbs 라이크 1 증가 
+   * ----------------------------------------------------------------------------*/ 
+	
+	@Override
+	public void bbsLikeAdd(Bb_LikeDto ldto) throws Exception {
+		// TODO Auto-generated method stub
+		bbBurgerDiyDao.bbsLikeAdd(ldto);
+	}
+  /*----------------------------------------------------------------------------
+   * bbs 라이크 1 감소  
+   * ----------------------------------------------------------------------------*/ 
+	
+	@Override
+	public void bbsLikeDelete(Bb_LikeDto ldto) throws Exception {
+		// TODO Auto-generated method stub
+		bbBurgerDiyDao.bbsLikeDelete(ldto);
 	}
 
 }
